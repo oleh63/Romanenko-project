@@ -1,0 +1,10 @@
+/* базові стилі */
+
+@import url("./common.css");
+
+/* стилі блоків */
+
+@import url("./header.css");
+@import url("./hero.css");
+@import url("./catalog.css");
+@import url("./footer.css");
