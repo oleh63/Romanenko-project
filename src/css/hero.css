@@ -23,13 +23,10 @@
 }
 
 .hero-text {
+  text-align: center;
   padding: 50px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .hero-text-title {
-  text-transform: uppercase;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
