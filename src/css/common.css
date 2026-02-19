@@ -16,3 +16,8 @@ ul,
 ol {
   list-style-type: none;
 }
+
+.icon {
+  fill: none;
+  stroke: #2a2529;
+}
