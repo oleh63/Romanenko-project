@@ -1,5 +1,7 @@
 .hero-container {
   background-image: url("../img/hero/mob.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 82px 16px;
   display: flex;
   flex-direction: column;
