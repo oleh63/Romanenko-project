@@ -1,5 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #f7f8f9;
+}
+
+.container {
+  width: 100%;
 }
 
 h1,
@@ -14,10 +19,29 @@ p {
 
 ul,
 ol {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .icon {
+  display: block;
   fill: none;
   stroke: #2a2529;
+}
+
+.logo {
+  fill: #2a2529;
+  stroke: none;
+  shape-rendering: geometricPrecision;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
 }
