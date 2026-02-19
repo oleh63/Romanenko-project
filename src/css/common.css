@@ -5,6 +5,8 @@ body {
 
 .container {
   width: 100%;
+  max-width: 452px;
+  margin: 0 auto;
 }
 
 h1,
