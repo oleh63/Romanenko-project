@@ -1,0 +1,41 @@
+.hero-container {
+  background-image: url("../img/hero/mob.webp");
+  padding: 82px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.hero {
+  color: #f7f8f9;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero-btn {
+  padding: 5px 12px;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.hero-text {
+  padding: 50px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.hero-text-description {
+  font-size: 14px;
+  text-align: center;
+}

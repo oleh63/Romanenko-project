@@ -1,12 +1,17 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f7f8f9;
+  font-weight: 400;
 }
 
 .container {
   width: 100%;
   max-width: 452px;
   margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
 }
 
 h1,
@@ -36,6 +41,10 @@ ol {
   fill: #2a2529;
   stroke: none;
   shape-rendering: geometricPrecision;
+}
+
+button {
+  color: #2a2529;
 }
 
 img {
