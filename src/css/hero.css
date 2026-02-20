@@ -18,6 +18,14 @@
   text-align: center;
   text-transform: uppercase;
 }
+.title-tablet {
+  display: none;
+}
+
+.hero-title-text {
+  display: none;
+}
+
 .hero-btn {
   padding: 5px 12px;
   font-size: 16px;
@@ -34,7 +42,69 @@
   line-height: 100%;
   margin-bottom: 10px;
 }
-.hero-text-description {
+.hero-text-description-mobile {
   font-size: 14px;
   text-align: center;
+}
+
+.hero-text-description-tablet {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+  }
+
+  .hero-container {
+    background-image: url("../img/hero/tablet.webp");
+    padding: 120px 64px;
+  }
+
+  .hero {
+    font-size: 24px;
+  }
+
+  .title-mobile {
+    display: none;
+  }
+
+  .title-tablet {
+    display: block;
+    min-width: 524px;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .hero-title-text {
+    max-width: 478px;
+    display: inline;
+    color: #f7f8f9;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero-btn {
+    padding: 12px 47px;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  .hero-text {
+    padding: 80px 116px;
+  }
+
+  .hero-text-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .hero-text-description-mobile {
+    display: none;
+  }
+  .hero-text-description-tablet {
+    display: block;
+    min-width: 488px;
+    font-size: 16px;
+    text-align: center;
+  }
 }
