@@ -1,5 +1,9 @@
+.section-container.container {
+  padding: 0;
+}
+
 .hero-container {
-  background-image: url("../img/hero/mob.webp");
+  background-image: url("/img/hero/mob.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 82px 16px;
@@ -8,6 +12,7 @@
   align-items: center;
   gap: 10px;
 }
+
 .hero {
   color: #f7f8f9;
   font-style: normal;
@@ -41,7 +46,7 @@
   }
 
   .hero-container {
-    background-image: url("../img/hero/tablet.webp");
+    background-image: url("/img/hero/tablet.webp");
     padding: 120px 64px;
   }
 
@@ -79,7 +84,7 @@
   .container {
   }
   .hero-container {
-    background-image: url("../img/hero/desktop.webp");
+    background-image: url("/img/hero/desktop.webp");
     padding: 312px 196px;
   }
 
