@@ -1,0 +1,39 @@
+.catalog-text {
+  text-align: center;
+  padding: 50px 16px;
+}
+.catalog-text-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.catalog-text-description-mobile {
+  font-size: 14px;
+  text-align: center;
+}
+
+.catalog-text-description-tablet {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .catalog-text {
+    padding: 80px 116px;
+  }
+
+  .catalog-text-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .catalog-text-description-mobile {
+    display: none;
+  }
+  .catalog-text-description-tablet {
+    display: block;
+    min-width: 488px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
