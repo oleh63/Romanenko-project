@@ -31,6 +31,7 @@
 
   .about-me-tablet-desktop {
     display: flex;
+    background-color: #ffffff;
   }
 
   .about-me-tablet-desktop-text {
@@ -87,5 +88,6 @@
 
   .about-me-img {
     width: 630px;
+    height: 100%;
   }
 }
