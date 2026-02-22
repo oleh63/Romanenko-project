@@ -1,0 +1,91 @@
+.section-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.title-about-me {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.text-about-me {
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.about-me-tablet-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .title-about-me {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .about-me-mob {
+    display: none;
+  }
+
+  .about-me-tablet-desktop {
+    display: flex;
+  }
+
+  .about-me-tablet-desktop-text {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 45px;
+  }
+
+  .about-me-tablet-desktop-text h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .about-me-desktop-text {
+    font-size: 16px;
+  }
+
+  .about-me-text-desktop {
+    display: none;
+  }
+
+  .about-me-img {
+    width: 328px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me-tablet-text {
+    display: none;
+  }
+
+  .title-about-me {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
+  .about-me-tablet-desktop-text {
+    padding: 146px 112px;
+  }
+
+  .about-me-tablet-desktop-text h3 {
+    width: 300px;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .about-me-text-desktop {
+    display: block;
+    font-size: 18px;
+    margin-top: 28px;
+  }
+
+  .about-me-img {
+    width: 630px;
+  }
+}
