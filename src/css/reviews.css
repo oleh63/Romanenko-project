@@ -47,3 +47,25 @@
   transition: transform 0.4s ease;
   touch-action: pan-y;
 }
+@media screen and (min-width: 720px) {
+  .reviews {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .reviews-title {
+    margin-bottom: 32px;
+  }
+  .slide {
+    flex: 0 0 25%; /* 4 */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .reviews-title {
+    font-size: 32px;
+  }
+}

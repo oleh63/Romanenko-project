@@ -32,11 +32,19 @@ const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
 let currentIndex = 0;
-const slidesPerView = 2;
+let slidesPerView = getSlidesPerView();
+
+function getSlidesPerView() {
+  if (window.innerWidth >= 720) return 4;
+  return 2;
+}
 
 function updateSlider() {
+  slidesPerView = getSlidesPerView();
+
   const slideWidth = slides[0].offsetWidth;
   track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
   updateButtons();
 }
 
@@ -59,7 +67,10 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("resize", updateSlider);
+window.addEventListener("resize", () => {
+  currentIndex = 0; // скидаємо щоб не було глюків
+  updateSlider();
+});
 
 updateSlider();
 
