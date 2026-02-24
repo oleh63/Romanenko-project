@@ -1,3 +1,12 @@
+.reviews {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.reviews-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .slider-wrapper {
   overflow: hidden;
   width: 100%;
@@ -6,17 +15,31 @@
 .slider-track {
   display: flex;
   transition: transform 0.4s ease;
+  padding: 2px;
 }
 
 .slide {
+  padding: 2px;
   flex: 0 0 50%; /* 2 картинки */
-  padding: 5px;
 }
 
 .slide img {
-  width: 100%;
-  display: block;
-  border-radius: 12px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.slider-btn.prev {
+  border: none;
+  background-color: transparent;
+}
+
+.slider-btn.next {
+  border: none;
+  background-color: transparent;
 }
 
 .slider-track {
