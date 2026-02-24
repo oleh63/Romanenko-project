@@ -1,0 +1,26 @@
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  flex: 0 0 50%; /* 2 картинки */
+  padding: 5px;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  touch-action: pan-y;
+}
