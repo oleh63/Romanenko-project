@@ -92,4 +92,28 @@
 }
 
 @media screen and (min-width: 1440px) {
+
+    .footer-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+   .container-footer {
+    margin-bottom: 60px;
+   }
+
+  .footer-nav-link {
+  font-size: 16px;
+}
+.footer-link .logo {
+    width: 180px;
+    height: 120px;
+
+  }
+  .footer-contact p {
+  font-size: 16px;
+}
+
+.footer-text {
+  font-size: 16px;
+}
 }
