@@ -1,6 +1,7 @@
 .footer-container {
   padding: 40px 0px;
   background-color: #ffffff;
+  border-top: 1px solid #2a2529;
 }
 
 .container-footer {
@@ -13,6 +14,7 @@
 .footer-link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-nav {
@@ -52,6 +54,41 @@
 }
 
 @media screen and (min-width: 720px) {
+  .footer-container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .footer-link {
+    justify-content: space-around;
+  }
+
+  .footer-link .logo {
+    width: 178px;
+    height: 102px;
+
+  }
+  .footer-nav {
+      gap: 30px;
+  }
+  .footer-nav-link {
+  font-size: 14px;
+}
+
+.footer-contact {
+    gap: 30px;
+}
+
+.footer-contact p {
+  font-size: 14px;
+}
+
+.footer-contact-link {
+    gap: 30px;
+}
+.footer-text {
+  font-size: 14px;
+}
 }
 
 @media screen and (min-width: 1440px) {
