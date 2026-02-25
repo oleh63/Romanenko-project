@@ -2,19 +2,29 @@ const openBtn = document.querySelector(".menu-button");
 const closeBtn = document.querySelector(".btn-menu-close");
 const mobMenu = document.querySelector(".mob-menu");
 
-openBtn.addEventListener("click", () => {
+function openMenu() {
   mobMenu.classList.add("is-open");
-  document.body.style.overflow = "hidden";
-});
+  document.body.classList.add("no-scroll");
+}
 
-closeBtn.addEventListener("click", () => {
+function closeMenu() {
   mobMenu.classList.remove("is-open");
-  document.body.style.overflow = "";
+  document.body.classList.remove("no-scroll");
+}
+
+openBtn.addEventListener("click", openMenu);
+closeBtn.addEventListener("click", closeMenu);
+
+// Закриття по кліку на бекдроп
+mobMenu.addEventListener("click", (e) => {
+  if (e.target === mobMenu) {
+    closeMenu();
+  }
 });
 
-mobMenu.addEventListener("click", (event) => {
-  if (event.target === mobMenu) {
-    mobMenu.classList.remove("is-open");
-    document.body.style.overflow = "";
+// Закриття по кліку на посилання
+mobMenu.addEventListener("click", (e) => {
+  if (e.target.closest("a")) {
+    closeMenu();
   }
 });

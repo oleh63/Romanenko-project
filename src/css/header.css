@@ -1,6 +1,9 @@
 .header {
-  max-width: 425px;
-  margin: 0 auto;
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
 }
 
 .header .container {
@@ -8,9 +11,11 @@
 }
 
 .header-container {
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 }
 
 .menu-button {
