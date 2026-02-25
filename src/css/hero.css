@@ -1,5 +1,4 @@
 .hero-section {
-  padding-top: 60px;
 }
 
 .section-container.container {
@@ -37,6 +36,10 @@
 
 .hero-title-text-desktop {
   display: none;
+}
+
+.hero-btn-wrapper {
+  display: inline-block;
 }
 
 .hero-btn {
@@ -112,4 +115,24 @@
     text-align: center;
     line-height: 1.2;
   }
+
+  .hero-btn {
+  display: inline-block;             /* ← змінив display */
+  padding: 15px 60px;
+  font-size: 16px;
+  line-height: 100%;
+  background-color: #f7f8f9;        /* або твій колір */
+  border: none;
+  cursor: pointer;
+  
+  /* ДОДАНО для плавності та ізоляції трансформації */
+  transform-origin: center;          /* центр збільшення */
+  transition: transform 300ms ease, background-color 300ms ease;
+  will-change: transform;            /* підказка браузеру */
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);           /* плавне збільшення */
+  background-color: #d1a9ad;
+}
 }

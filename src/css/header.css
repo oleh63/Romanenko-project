@@ -1,21 +1,20 @@
 .header {
-  display: block;
+  padding: 16px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
   position: sticky;
   top: 0;
-  z-index: 2;
-  width: 100%;
+  z-index: 1000;
 }
 
 .header .container {
-  padding: 13px 16px;
 }
 
 .header-container {
-  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
 }
 
 .menu-button {
@@ -37,12 +36,11 @@
 
 @media screen and (min-width: 720px) {
   .header {
-    max-width: 720px;
     padding: 21px 32px;
+    margin: 0 auto;
   }
 
   .header-container {
-    gap: 105px;
   }
 
   .menu-button {
@@ -77,12 +75,50 @@
 
 @media screen and (min-width: 1440px) {
   .header {
-    max-width: 1440px;
     padding: 30px 90px;
   }
 
   .logo {
     width: 102px;
     height: 58px;
+  }
+
+  /* .nav-link li a {
+    
+  }
+
+  .nav-link-list li a:hover {
+    border-bottom: 2px solid #d1a9ad;
+  } */
+
+  .nav-link-list li a {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .nav-link-list li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #d1a9ad;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .nav-link-list li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .list-links .icon {
+    transition: transform 250ms ease;
+  }
+
+  .list-links a:hover .icon {
+    transform: scale(1.2);
+    stroke: #d1a9ad;
   }
 }

@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 40px; /* висота твого header */
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f7f8f9;
