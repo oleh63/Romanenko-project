@@ -118,6 +118,10 @@
     font-size: 16px;
   }
 
+  .footer-nav-link:hover {
+    text-decoration: underline;
+  }
+
   .footer-link a .logo {
     transition: transform 250ms ease;
   }
