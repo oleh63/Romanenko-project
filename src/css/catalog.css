@@ -82,9 +82,13 @@
 }
 
 @media screen and (min-width: 720px) {
+  .section-catalog.container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   .catalog-text {
-    padding: 80px 116px;
-    margin: 0;
+    padding: 0px 116px;
   }
 
   .catalog-text-title {

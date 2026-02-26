@@ -1,8 +1,11 @@
 .mission {
+  padding-bottom: 50px;
+}
+
+.mission-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
   gap: 10px;
 }
 
@@ -23,46 +26,43 @@
 }
 
 @media screen and (min-width: 720px) {
-
-    .mission {
+  .mission-container {
     gap: 14px;
-    padding-bottom: 80px;
-    }
-    .title-mission-mob {
+  }
+  .title-mission-mob {
     display: none;
-    }
-    .title-mission-tablet {
+  }
+  .title-mission-tablet {
     display: block;
-    }
+  }
 
-    .mission-text-mob {
+  .mission-text-mob {
     display: none;
-}
+  }
 
-    .mission-text-tablet {
+  .mission-text-tablet {
     display: block;
     font-size: 16px;
     text-align: center;
-}
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .mission {
+  .mission-container {
     gap: 20px;
-    padding-bottom: 150px;
-    }
+  }
 
-    .title-mission-tablet {
+  .title-mission-tablet {
     font-size: 32px;
-    }
-    .mission-text-tablet {
+  }
+  .mission-text-tablet {
     display: none;
-    }
+  }
 
-    .mission-text-desktop {
+  .mission-text-desktop {
     display: block;
     text-align: center;
     font-size: 16px;
     width: 1040px;
-}
+  }
 }
