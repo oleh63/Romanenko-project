@@ -158,6 +158,15 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .catalog-item {
+    transition: box-shadow 300ms ease;
+  }
+
+  .catalog-item:hover {
+    cursor: pointer;
+    box-shadow: -3px 12px 21px -7px rgba(209, 169, 173, 0.91);
+  }
+
   .catalog-img {
     margin-bottom: 16px;
   }
@@ -179,5 +188,10 @@
   .catalog-icon {
     width: 20px;
     height: 20px;
+  }
+
+  .catalog-btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }

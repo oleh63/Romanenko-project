@@ -1,14 +1,11 @@
 .footer-container {
   padding: 40px 0px;
   background-color: #ffffff;
-  border-top: 1px solid #2a2529;
+  border-top: 2px solid #d1a9ad;
 }
 
 .container-footer {
   margin-bottom: 40px;
-}
-
-.container {
 }
 
 .footer-link {
@@ -25,8 +22,6 @@
 
 .footer-nav-link {
   font-size: 10px;
-}
-.logo {
 }
 
 .footer-contact {
@@ -121,5 +116,18 @@
 
   .footer-text {
     font-size: 16px;
+  }
+
+  .footer-link a .logo {
+    transition: transform 250ms ease;
+  }
+
+  .footer-contact-link a .icon {
+    transition: transform 250ms ease;
+  }
+
+  .footer-contact-link a:hover .icon {
+    transform: scale(1.2);
+    stroke: #d1a9ad;
   }
 }

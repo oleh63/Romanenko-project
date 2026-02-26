@@ -74,4 +74,9 @@
   .reviews-title {
     font-size: 32px;
   }
+
+  .slider-btn:hover .icon {
+    cursor: pointer;
+    stroke: #d1a9ad;
+  }
 }

@@ -95,4 +95,13 @@
     font-size: 16px;
     margin-bottom: 10px;
   }
+
+  .insta-link {
+    transition: transform 250ms ease;
+  }
+
+  .insta-link:hover {
+    transform: scale(1.05);
+    background-color: #dedede;
+  }
 }
