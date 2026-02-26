@@ -32,6 +32,11 @@
   padding: 5px 62px;
 }
 
+.insta-link:active {
+  transform: scale(0.95);
+  background-color: #dedede;
+}
+
 .insta-text-link-tablet {
   display: none;
 }

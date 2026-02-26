@@ -47,6 +47,12 @@
   transition: transform 0.4s ease;
   touch-action: pan-y;
 }
+
+.slider-btn:active .icon {
+  stroke: #d1a9ad;
+  transform: scale(0.95);
+}
+
 @media screen and (min-width: 720px) {
   .reviews {
     padding-top: 50px;

@@ -77,6 +77,10 @@
   font-size: 12px;
 }
 
+.catalog-btn:active {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 720px) {
   .catalog-text {
     padding: 80px 116px;

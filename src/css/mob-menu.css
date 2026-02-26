@@ -119,3 +119,7 @@
 .contact-links-menu a:active .icon {
   transform: scale(0.85);
 }
+
+.logo-container a:active .logo-menu {
+  transform: scale(0.9);
+}

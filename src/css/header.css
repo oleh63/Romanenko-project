@@ -17,7 +17,11 @@
   justify-content: space-between;
 }
 
-.menu-button {
+.header-container a:active .logo {
+  transform: scale(0.95);
+}
+
+.header-container .menu-button {
   background: none;
   border: none;
   padding: 4px;

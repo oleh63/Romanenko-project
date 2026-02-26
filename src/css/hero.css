@@ -42,15 +42,17 @@
   display: inline-block;
 }
 
-.hero-btn {
+.link-btn {
+  background-color: #ffffff;
   padding: 5px 12px;
   font-size: 16px;
   line-height: 100%;
   border: none;
+  display: block;
 }
 
-.hero-btn:active {
-  transform: scale(0.98);
+.link-btn:active {
+  transform: scale(0.95);
   background-color: #d1a9ad;
 }
 
@@ -86,7 +88,7 @@
     margin-bottom: 30px;
   }
 
-  .hero-btn {
+  .link-btn {
     padding: 12px 47px;
     font-size: 16px;
     line-height: 100%;
@@ -122,7 +124,7 @@
     line-height: 1.2;
   }
 
-  .hero-btn {
+  .link-btn {
     display: inline-block; /* ← змінив display */
     padding: 15px 60px;
     font-size: 16px;
@@ -139,7 +141,7 @@
     will-change: transform; /* підказка браузеру */
   }
 
-  .hero-btn:hover {
+  .link-btn:hover {
     transform: scale(1.05); /* плавне збільшення */
     background-color: #d1a9ad;
   }
