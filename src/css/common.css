@@ -6,6 +6,10 @@ section {
   scroll-margin-top: 40px; /* висота твого header */
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f7f8f9;

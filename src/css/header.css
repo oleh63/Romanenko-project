@@ -20,7 +20,11 @@
 .menu-button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 4px;
+}
+
+.menu-button:active {
+  transform: scale(0.8);
 }
 
 .nav-links {
@@ -32,6 +36,10 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.list-links li a:active .icon {
+  transform: scale(0.8);
 }
 
 @media screen and (min-width: 720px) {

@@ -1,6 +1,6 @@
 .mob-menu {
   position: fixed;
-  z-index: 999;
+  z-index: 2000;
   top: 0;
   left: 0;
   width: 100%;
@@ -11,11 +11,11 @@
   visibility: hidden;
   pointer-events: none;
 
-  transform: translateX(100%);
+  /* transform: translateX(100%);
   transition:
     transform 300ms ease,
     opacity 300ms ease,
-    visibility 300ms ease;
+    visibility 300ms ease; */
 }
 
 .mob-menu.is-open {
@@ -23,6 +23,10 @@
   visibility: visible;
   pointer-events: auto;
 
+  /* transform: translateX(0); */
+}
+
+.mob-menu.is-open .mob-menu-container {
   transform: translateX(0);
 }
 
@@ -30,12 +34,12 @@
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: #e0cdcf;
+  transform: translateX(100%);
+  transition: transform 600ms ease;
 }
 .logo-container {
   display: flex;
-  gap: 245px;
-}
-.logo-menu {
+  justify-content: space-between;
 }
 
 .btn-menu-close {
@@ -44,6 +48,16 @@
   background-color: transparent;
   border: none;
 }
+
+.btn-menu-close:active .logo-menu {
+  transform: scale(0.85);
+}
+
+.logo-menu {
+  display: block;
+  transition: transform 150ms ease;
+}
+
 .nav-links-menu {
   margin-top: 50px;
   margin-bottom: 36px;
@@ -57,18 +71,32 @@
 .nav-link-menu {
   width: 328px;
   background-color: #ffffff;
+  /* padding: 8px; */
+  /* color: #2a2529; */
+}
+
+.nav-link-menu:active {
+  transform: scale(0.95);
+}
+
+.nav-link-menu a {
+  display: block;
   padding: 8px;
+  width: 100%;
   color: #2a2529;
 }
 
 .link-instagram {
   display: block;
-  width: fit-content;
   margin: 0 auto;
   width: 328px;
   background-color: #ffffff;
   padding: 8px;
   text-align: center;
+}
+
+.link-instagram:active {
+  transform: scale(0.95);
 }
 
 .contact-menu {
@@ -86,4 +114,8 @@
 .contact-links-menu {
   display: flex;
   gap: 20px;
+}
+
+.contact-links-menu a:active .icon {
+  transform: scale(0.85);
 }
