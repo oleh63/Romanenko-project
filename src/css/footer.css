@@ -17,11 +17,12 @@
 .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .footer-nav-link {
-  font-size: 10px;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 12px;
 }
 
 .footer-contact {
