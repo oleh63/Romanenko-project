@@ -1,4 +1,5 @@
 import { catalogData } from "./catalog-data.js";
+import { initLightbox } from "./lightbox.js";
 
 const catalogList = document.querySelector(".catalog-list");
 const modal = document.querySelector(".catalog-modal");
@@ -33,6 +34,8 @@ function openModal(category) {
 
     gallery.append(li);
   });
+
+  initLightbox(gallery);
 
   modal.classList.add("is-open");
   document.body.style.overflow = "hidden";

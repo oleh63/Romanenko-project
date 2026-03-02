@@ -1,0 +1,38 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+  z-index: 2000;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+
+.lightbox-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 80vw;
+  max-height: 75vh;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .lightbox-image {
+    max-width: 700px;
+    height: auto;
+  }
+}

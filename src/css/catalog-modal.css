@@ -15,7 +15,7 @@
 }
 
 .catalog-modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -27,21 +27,52 @@
   background: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-radius: 12px;
+}
+
+.modal-close {
+  display: block;
+  margin-bottom: 16px;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
 }
 
 .modal-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, 328px);
   gap: 20px;
+  justify-content: center;
 }
 
 .modal-gallery img {
-  width: 100%;
-  height: auto;
+  display: block;
+  width: 328px;
+  height: 350px;
+  object-fit: cover;
 }
 
 .modal-price {
   margin-top: 8px;
   font-size: 16px;
+}
+
+@media screen and (min-width: 720px) {
+  .modal-gallery {
+    grid-template-columns: repeat(2, 328px);
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .catalog-modal-content {
+    max-width: 1200px;
+  }
+  .modal-gallery {
+    grid-template-columns: repeat(3, 328px);
+  }
+}
+
+html.modal-open {
+  overflow: hidden;
+  padding-right: 15px; /* або dynamic через JS */
 }
