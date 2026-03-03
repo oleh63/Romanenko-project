@@ -17,7 +17,10 @@ function createSlides() {
           media="(min-width:720px)" />
         <img 
           src="/img/reviews/mobile/${i}.webp"
-          alt="Відгук нареченої ${i}" />
+          alt="Відгук нареченої ${i}"
+          loading="lazy"
+          decoding="async"
+          />
       </picture>
     `;
 
