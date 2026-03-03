@@ -291,6 +291,26 @@ export const catalogData = {
       img: "/img/products/rings/1.webp",
       price: 1000,
     },
+    {
+      img: "/img/products/rings/2.webp",
+      price: 1000,
+    },
+    {
+      img: "/img/products/rings/3.webp",
+      price: 1000,
+    },
+    {
+      img: "/img/products/rings/4.webp",
+      price: 1000,
+    },
+    {
+      img: "/img/products/rings/5.webp",
+      price: 1000,
+    },
+    {
+      img: "/img/products/rings/6.webp",
+      price: 1000,
+    },
   ],
 
   combs: [
