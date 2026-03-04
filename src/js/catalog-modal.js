@@ -28,7 +28,7 @@ function openModal(category) {
     li.classList.add("modal-item");
 
     li.innerHTML = `
-      <img src="${product.img}" alt="">
+      <img src="${product.img}" alt="${product.alt}">
       <p class="modal-price">${product.price} ₴</p>
     `;
 
