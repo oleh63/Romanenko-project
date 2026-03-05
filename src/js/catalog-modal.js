@@ -39,11 +39,17 @@ function openModal(category) {
 
   modal.classList.add("is-open");
   document.body.style.overflow = "hidden";
+
+  history.pushState({ modal: true }, "");
 }
 
 function closeModal() {
   modal.classList.remove("is-open");
   document.body.style.overflow = "";
+
+  if (history.state?.modal) {
+    history.back();
+  }
 }
 
 closeBtn.addEventListener("click", closeModal);
@@ -51,4 +57,11 @@ backdrop.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
+});
+
+window.addEventListener("popstate", () => {
+  if (modal.classList.contains("is-open")) {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
 });
