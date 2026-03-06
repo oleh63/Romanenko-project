@@ -8,8 +8,7 @@ export function initLightbox(gallery) {
   function openLightbox(src) {
     lightboxImg.src = src;
     lightbox.classList.add("is-open");
-
-    history.pushState({ lightbox: true }, "");
+    // ❌ не пушимо новий state
   }
 
   function closeLightbox() {
@@ -17,19 +16,22 @@ export function initLightbox(gallery) {
     lightboxImg.src = "";
   }
 
+  // відкриття картинки
   gallery.addEventListener("click", (e) => {
     const img = e.target.closest("img");
     if (!img) return;
-
     openLightbox(img.src);
   });
 
+  // клік по фону
   lightboxBackdrop.addEventListener("click", closeLightbox);
 
+  // ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLightbox();
   });
 
+  // натискання назад
   window.addEventListener("popstate", () => {
     if (lightbox.classList.contains("is-open")) {
       closeLightbox();
