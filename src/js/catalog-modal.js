@@ -55,6 +55,13 @@ document.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("popstate", (e) => {
+  const lightbox = document.querySelector(".lightbox");
+
+  // якщо відкритий лайтбокс — модалку не чіпаємо
+  if (lightbox && lightbox.classList.contains("is-open")) {
+    return;
+  }
+
   if (e.state?.modal) {
     closeModal();
   }
