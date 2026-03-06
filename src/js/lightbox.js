@@ -9,7 +9,6 @@ export function initLightbox(gallery) {
     lightboxImg.src = src;
     lightbox.classList.add("is-open");
 
-    // додаємо стан
     history.pushState({ lightbox: true }, "");
   }
 
@@ -31,9 +30,8 @@ export function initLightbox(gallery) {
     if (e.key === "Escape") closeLightbox();
   });
 
-  // кнопка назад
-  window.addEventListener("popstate", (e) => {
-    if (e.state?.lightbox) {
+  window.addEventListener("popstate", () => {
+    if (lightbox.classList.contains("is-open")) {
       closeLightbox();
     }
   });

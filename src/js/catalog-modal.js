@@ -25,7 +25,6 @@ function openModal(category) {
 
   products.forEach((product) => {
     const li = document.createElement("li");
-
     li.classList.add("modal-item");
 
     li.innerHTML = `
@@ -54,15 +53,13 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
 
-window.addEventListener("popstate", (e) => {
+window.addEventListener("popstate", () => {
   const lightbox = document.querySelector(".lightbox");
 
-  // якщо відкритий лайтбокс — модалку не чіпаємо
-  if (lightbox && lightbox.classList.contains("is-open")) {
-    return;
-  }
+  // якщо відкритий лайтбокс — його закриє lightbox.js
+  if (lightbox && lightbox.classList.contains("is-open")) return;
 
-  if (e.state?.modal) {
+  if (modal.classList.contains("is-open")) {
     closeModal();
   }
 });
