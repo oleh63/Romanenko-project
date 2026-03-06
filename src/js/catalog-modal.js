@@ -7,12 +7,13 @@ const gallery = document.querySelector(".modal-gallery");
 const closeBtn = document.querySelector(".modal-close");
 const backdrop = document.querySelector(".catalog-modal-backdrop");
 
+initLightbox(gallery);
+
 catalogList.addEventListener("click", (e) => {
   const card = e.target.closest(".catalog-item");
   if (!card) return;
 
   const category = card.dataset.category;
-
   openModal(category);
 });
 
@@ -35,8 +36,6 @@ function openModal(category) {
     gallery.append(li);
   });
 
-  initLightbox(gallery);
-
   modal.classList.add("is-open");
   document.body.style.overflow = "hidden";
 
@@ -46,10 +45,6 @@ function openModal(category) {
 function closeModal() {
   modal.classList.remove("is-open");
   document.body.style.overflow = "";
-
-  if (history.state?.modal) {
-    history.back();
-  }
 }
 
 closeBtn.addEventListener("click", closeModal);
@@ -59,9 +54,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
 
-window.addEventListener("popstate", () => {
-  if (modal.classList.contains("is-open")) {
-    modal.classList.remove("is-open");
-    document.body.style.overflow = "";
+window.addEventListener("popstate", (e) => {
+  if (e.state?.modal) {
+    closeModal();
   }
 });

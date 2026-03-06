@@ -5,24 +5,36 @@ export function initLightbox(gallery) {
 
   if (!lightbox || !lightboxImg || !lightboxBackdrop) return;
 
-  gallery.addEventListener("click", (e) => {
-    const img = e.target.closest("img");
-    if (!img) return;
-
-    lightboxImg.src = img.src;
+  function openLightbox(src) {
+    lightboxImg.src = src;
     lightbox.classList.add("is-open");
-  });
+
+    // додаємо стан
+    history.pushState({ lightbox: true }, "");
+  }
 
   function closeLightbox() {
     lightbox.classList.remove("is-open");
     lightboxImg.src = "";
   }
 
-  // ✅ обробник на клік по фоні
+  gallery.addEventListener("click", (e) => {
+    const img = e.target.closest("img");
+    if (!img) return;
+
+    openLightbox(img.src);
+  });
+
   lightboxBackdrop.addEventListener("click", closeLightbox);
 
-  // ✅ закриття по ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLightbox();
+  });
+
+  // кнопка назад
+  window.addEventListener("popstate", (e) => {
+    if (e.state?.lightbox) {
+      closeLightbox();
+    }
   });
 }
