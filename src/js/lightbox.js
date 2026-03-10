@@ -1,16 +1,13 @@
 export function initLightbox(gallery) {
   const lightbox = document.querySelector(".lightbox");
   const lightboxImg = document.querySelector(".lightbox-image");
-  const lightboxBackdrop = document.querySelector(".lightbox-backdrop");
-
-  if (!lightbox || !lightboxImg || !lightboxBackdrop) return;
+  const backdrop = document.querySelector(".lightbox-backdrop");
 
   function openLightbox(src) {
     lightboxImg.src = src;
     lightbox.classList.add("is-open");
 
-    // додаємо state в історію
-    history.pushState({ lightbox: true }, "");
+    history.pushState({ view: "lightbox" }, "");
   }
 
   function closeLightbox() {
@@ -25,20 +22,21 @@ export function initLightbox(gallery) {
     openLightbox(img.src);
   });
 
-  lightboxBackdrop.addEventListener("click", () => {
-    closeLightbox();
+  backdrop.addEventListener("click", () => {
     history.back();
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
-      closeLightbox();
       history.back();
     }
   });
 
-  window.addEventListener("popstate", () => {
-    if (lightbox.classList.contains("is-open")) {
+  window.addEventListener("popstate", (e) => {
+    if (
+      e.state?.view !== "lightbox" &&
+      lightbox.classList.contains("is-open")
+    ) {
       closeLightbox();
     }
   });

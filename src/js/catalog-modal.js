@@ -13,18 +13,17 @@ catalogList.addEventListener("click", (e) => {
   const card = e.target.closest(".catalog-item");
   if (!card) return;
 
-  const category = card.dataset.category;
-  openModal(category);
+  openModal(card.dataset.category);
 });
 
 function openModal(category) {
   gallery.innerHTML = "";
 
   const products = catalogData[category];
-  if (!products) return;
 
   products.forEach((product) => {
     const li = document.createElement("li");
+
     li.classList.add("modal-item");
 
     li.innerHTML = `
@@ -38,7 +37,7 @@ function openModal(category) {
   modal.classList.add("is-open");
   document.body.style.overflow = "hidden";
 
-  history.pushState({ modal: true }, "");
+  history.pushState({ view: "modal" }, "");
 }
 
 function closeModal() {
@@ -46,29 +45,17 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-closeBtn.addEventListener("click", () => {
-  closeModal();
-  history.back();
-});
-
-backdrop.addEventListener("click", () => {
-  closeModal();
-  history.back();
-});
+closeBtn.addEventListener("click", () => history.back());
+backdrop.addEventListener("click", () => history.back());
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("is-open")) {
-    closeModal();
     history.back();
   }
 });
 
-window.addEventListener("popstate", () => {
-  const lightbox = document.querySelector(".lightbox");
-
-  if (lightbox && lightbox.classList.contains("is-open")) return;
-
-  if (modal.classList.contains("is-open")) {
+window.addEventListener("popstate", (e) => {
+  if (e.state?.view !== "modal" && modal.classList.contains("is-open")) {
     closeModal();
   }
 });
