@@ -1,6 +1,5 @@
 import { catalogData } from "./catalog-data.js";
-
-import { initLightbox, isLightboxOpen } from "./lightbox.js";
+import { initLightbox } from "./lightbox.js";
 
 const catalogList = document.querySelector(".catalog-list");
 const modal = document.querySelector(".catalog-modal");
@@ -8,7 +7,6 @@ const gallery = document.querySelector(".modal-gallery");
 const closeBtn = document.querySelector(".modal-close");
 const backdrop = document.querySelector(".catalog-modal-backdrop");
 
-// викликаємо один раз
 initLightbox(gallery);
 
 catalogList.addEventListener("click", (e) => {
@@ -40,7 +38,6 @@ function openModal(category) {
   modal.classList.add("is-open");
   document.body.style.overflow = "hidden";
 
-  // пушимо стан тільки для модалки
   history.pushState({ modal: true }, "");
 }
 
@@ -49,16 +46,27 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-closeBtn.addEventListener("click", closeModal);
-backdrop.addEventListener("click", closeModal);
+closeBtn.addEventListener("click", () => {
+  closeModal();
+  history.back();
+});
+
+backdrop.addEventListener("click", () => {
+  closeModal();
+  history.back();
+});
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeModal();
+  if (e.key === "Escape" && modal.classList.contains("is-open")) {
+    closeModal();
+    history.back();
+  }
 });
 
 window.addEventListener("popstate", () => {
-  // якщо відкритий лайтбокс — модалку не закриваємо
-  if (isLightboxOpen) return;
+  const lightbox = document.querySelector(".lightbox");
+
+  if (lightbox && lightbox.classList.contains("is-open")) return;
 
   if (modal.classList.contains("is-open")) {
     closeModal();
