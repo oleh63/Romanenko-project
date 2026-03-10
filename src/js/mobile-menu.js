@@ -35,7 +35,9 @@ mobMenu.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("popstate", () => {
+window.addEventListener("popstate", (e) => {
+  if (e.state?.menu === true) return;
+
   if (mobMenu.classList.contains("is-open")) {
     mobMenu.classList.remove("is-open");
     document.body.classList.remove("no-scroll");

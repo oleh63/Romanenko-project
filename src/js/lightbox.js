@@ -23,12 +23,12 @@ export function initLightbox(gallery) {
   });
 
   backdrop.addEventListener("click", () => {
-    history.back();
+    closeLightbox();
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
-      history.back();
+      closeLightbox();
     }
   });
 
