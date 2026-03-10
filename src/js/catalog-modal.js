@@ -1,5 +1,6 @@
 import { catalogData } from "./catalog-data.js";
-import { initLightbox } from "./lightbox.js";
+
+import { initLightbox, isLightboxOpen } from "./lightbox.js";
 
 const catalogList = document.querySelector(".catalog-list");
 const modal = document.querySelector(".catalog-modal");
@@ -56,10 +57,8 @@ document.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("popstate", () => {
-  const lightbox = document.querySelector(".lightbox");
-
-  // якщо відкритий лайтбокс — нічого не робимо
-  if (lightbox && lightbox.classList.contains("is-open")) return;
+  // якщо відкритий лайтбокс — модалку не закриваємо
+  if (isLightboxOpen) return;
 
   if (modal.classList.contains("is-open")) {
     closeModal();

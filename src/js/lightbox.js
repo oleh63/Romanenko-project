@@ -1,3 +1,5 @@
+export let isLightboxOpen = false;
+
 export function initLightbox(gallery) {
   const lightbox = document.querySelector(".lightbox");
   const lightboxImg = document.querySelector(".lightbox-image");
@@ -8,32 +10,29 @@ export function initLightbox(gallery) {
   function openLightbox(src) {
     lightboxImg.src = src;
     lightbox.classList.add("is-open");
-    // ❌ не пушимо новий state
+    isLightboxOpen = true;
   }
 
   function closeLightbox() {
     lightbox.classList.remove("is-open");
     lightboxImg.src = "";
+    isLightboxOpen = false;
   }
 
-  // відкриття картинки
   gallery.addEventListener("click", (e) => {
     const img = e.target.closest("img");
     if (!img) return;
     openLightbox(img.src);
   });
 
-  // клік по фону
   lightboxBackdrop.addEventListener("click", closeLightbox);
 
-  // ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLightbox();
   });
 
-  // натискання назад
   window.addEventListener("popstate", () => {
-    if (lightbox.classList.contains("is-open")) {
+    if (isLightboxOpen) {
       closeLightbox();
     }
   });
