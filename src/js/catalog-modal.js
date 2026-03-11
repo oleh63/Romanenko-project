@@ -55,7 +55,8 @@ document.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("popstate", (e) => {
-  if (e.state?.view === "lightbox") return;
+  // якщо ми все ще у модальному state — нічого не робимо
+  if (e.state?.view === "modal") return;
 
   if (modal.classList.contains("is-open")) {
     closeModal();
