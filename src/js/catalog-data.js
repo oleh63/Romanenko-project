@@ -17,7 +17,7 @@ export const catalogData = {
     },
     {
       img: "/img/products/branches/4.webp",
-      price: 720, // 1 штука
+      price: "720 / 1 шт.",
       alt: "гілочки",
     },
     {
@@ -284,7 +284,7 @@ export const catalogData = {
   pins: [
     {
       img: "/img/products/pins/1.webp",
-      price: 250, // ціна за штуку
+      price: "250 / 1 шт.",
       alt: "шпильки",
     },
     {
@@ -294,12 +294,12 @@ export const catalogData = {
     },
     {
       img: "/img/products/pins/3.webp",
-      price: 250, // ціна за штуку
+      price: "250 / 1 шт.",
       alt: "шпильки",
     },
     {
       img: "/img/products/pins/4.webp",
-      price: 650, // ціна за 3 штуки
+      price: "650 / 3шт.",
       alt: "шпильки",
     },
     {
@@ -314,7 +314,7 @@ export const catalogData = {
     },
     {
       img: "/img/products/pins/7.webp",
-      price: 650, // ціна за 3 штуки
+      price: "650 / 3шт.",
       alt: "шпильки",
     },
     {
@@ -324,17 +324,9 @@ export const catalogData = {
     },
     {
       img: "/img/products/pins/9.webp",
-      price: 600, // ціна за 3 штуки
+      price: "600 / 3шт.",
       alt: "шпильки",
     },
-
-    // видалити
-
-    // {
-    //   img: "/img/products/pins/10.webp",
-    //   price: 1000,
-    //   alt: "шпильки",
-    // },
   ],
 
   rings: [
@@ -393,7 +385,7 @@ export const catalogData = {
     },
     {
       img: "/img/products/combs/6.webp",
-      price: 1500, // size 22см
+      price: "1500 (розмір 22 см.)",
       alt: "гребінці",
     },
     {
